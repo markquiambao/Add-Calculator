@@ -9,13 +9,26 @@ function addNumbers() {
   if (isNaN(num1) || isNaN(num2)) {
     alert("Please input a number");
     return;
-  } else if (isNaN(num3) || isNaN(num4) || isNaN(num5) || isNaN(num6)) {
+  } else if (isNaN(num3)) {
     document.getElementById("num3").value = "0";
     document.getElementById("num4").value = "0";
     document.getElementById("num5").value = "0";
     document.getElementById("num6").value = "0";
     return;
+  } else if (isNaN(num4)) {
+    document.getElementById("num4").value = "0";
+    document.getElementById("num5").value = "0";
+    document.getElementById("num6").value = "0";
+    return;
+  } else if (isNaN(num5)) {
+    document.getElementById("num5").value = "0";
+    document.getElementById("num6").value = "0";
+    return;
+  } else if (isNaN(num6)) {
+    document.getElementById("num6").value = "0";
+    return;
   }
+
   var result = num1 + num2 + num3 + num4 + num5 + num6;
   var result = result.toLocaleString();
   document.getElementById("result").innerHTML =
