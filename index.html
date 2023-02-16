@@ -1,69 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Calculator</title>
-  <link rel="stylesheet" 
-  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/index.js"></script>
- <script src="https://kit.fontawesome.com/2f4442eb52.js" crossorigin="anonymous"></script>
+  <title>Mini Calculator</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <script src="https://kit.fontawesome.com/2f4442eb52.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-  
-<div class="container">
-<form>
-  <div class="bg">
-     <h1>Add Calculator</h1>
-  <div class="login-form">
-   
-  <label for="num1">1:</label>
-  <input type="number" id="num1" name="num1" placeholder="Enter a number"><br>
-    <button type="button" onclick="clearNum1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="bg">
+        <h1>Add Calculator</h1>
+        <div class="login-form">
+
+          <label for="num1">1:</label>
+          <input type="number" id="num1" name="num1" placeholder="Enter a number"><br>
+          <button type="button" onclick="clearNum1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+
+        <div class="login-form">
+          <label for="num2">2:</label>
+          <input type="number" id="num2" name="num2" placeholder="Enter a number"><br>
+          <button type="button" onclick="clearNum2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+
+        <div class="login-form">
+          <label for="num3">3:</label>
+          <input type="number" id="num3" name="num3" placeholder="Enter a number"><br>
+          <button type="button" onclick="clearNum3()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+
+        <div class="login-form">
+          <label for="num4">4:</label>
+          <input type="number" id="num4" name="num4" placeholder="Enter a number"><br>
+          <button type="button" onclick="clearNum4()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+
+        <div class="login-form">
+          <label for="num5">5:</label>
+          <input type="number" id="num5" name="num5" placeholder="Enter a number"><br>
+          <button type="button" onclick="clearNum5()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+
+        <div class="login-form">
+          <label for="num6">6:</label>
+          <input type="number" id="num6" name="num6" placeholder="Enter a number"><br>
+          <button type="button" onclick="clearNum6()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+
+        <div class="login-form cal-btn">
+          <button type="button" class="btn" onclick="addNumbers()"><i class="fa-solid fa-equals fa-xl"></i></button>
+        </div>
+
+        <div id="result"></div>
+
+      </div>
+      <!--bg-->
+      <div class="multiply">
+        <h1>Multiply</h1>
+        <div class="login-form">
+          <div>
+            <label for="mult1"></label>
+          </div>
+          <input type="number" id="mult1" name="mult1" placeholder="Enter the total number"><br>
+          <button type="button" onclick="clearmult1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+        <div class="login-form">
+          <div>
+            <label for="mult2"></label>
+          </div>
+          <input type="number" id="mult2" name="mult2" placeholder="Enter the number of nights"><br>
+          <button type="button" onclick="clearmult2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+        <div class="login-form cal-btn">
+          <button type="button" class="btn" onclick="multiplyNumbers()"><i class="fa-solid fa-equals fa-xl"></i></button>
+        </div>
+
+        <div id="result-1"></div>
+      </div>
+
+      <div class="date-calc">
+        <h1>Date Calculator </h1>
+
+        <div class="form-group">
+          <label class="control-label" for="date">From:</label>
+
+          <input class="form-control" id="date2" name="date" placeholder="MM/DD/YYYY" type="text" /><button type="button" onclick="cleardate2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+
+          <label class="control-label" for="date">To:</label>
+
+          <input class="form-control" id="date1" name="date" placeholder="MM/DD/YYYY" type="text" /><button type="button" onclick="cleardate1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+          <button id="sub" onclick="func()" type="button" class="btn btn-primary btn-sm"> Check</button>
+          <div class="alert alert-primary" role="alert" id="ans"></div>
+        </div>
+      </div>
+
     </div>
-  
-  <div class="login-form">
-  <label for="num2">2:</label>
-  <input type="number" id="num2" name="num2" placeholder="Enter a number"><br>
-  <button type="button" onclick="clearNum2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-</div>
-  
-  <div class="login-form">
-  <label for="num3">3:</label>
-  <input type="number" id="num3" name="num3" placeholder="Enter a number"><br>
-  <button type="button" onclick="clearNum3()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-</div>
-  
-  <div class="login-form">
-  <label for="num4">4:</label>
-  <input type="number" id="num4" name="num4" placeholder="Enter a number"><br>
-  <button type="button" onclick="clearNum4()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-</div>
-  
-  <div class="login-form">
-  <label for="num5">5:</label>
-  <input type="number" id="num5" name="num5" placeholder="Enter a number"><br>
-  <button type="button" onclick="clearNum5()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-</div>
-  
-  <div class="login-form">
-  <label for="num6">6:</label>
-  <input type="number" id="num6" name="num6" placeholder="Enter a number"><br>
-  <button type="button" onclick="clearNum6()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-</div>
-  
-  <div class="login-form cal-btn">
-  <button type="button" class="btn" onclick="addNumbers()"><i class="fa-solid fa-equals fa-xl"></i></button>
-    </div>
-</form>
-<div id="result"></div>
+    <!--card-->
+
   </div>
-  
-  </div>
+  <!--container-->
 
-
-
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </body>
+
 </html>
