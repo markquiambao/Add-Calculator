@@ -154,10 +154,17 @@ function discNumbers() {
 
 function cleardisc1() {
   document.getElementById("disc1").value = "0";
+  clearResults();
 }
 
 function cleardisc2() {
   document.getElementById("disc2").value = "0";
+  clearResults();
 }
 
+function clearResults() {
+  document.getElementById("result-2").innerHTML = "";
+  document.getElementById("result-3").innerHTML = "";
+  document.getElementById("result-4").innerHTML = "";
+}
 
