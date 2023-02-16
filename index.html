@@ -110,6 +110,31 @@
   </div>
   <!--container-->
 
+  <div class="discount">
+    <h1>Discount</h1>
+    <div class="login-form">
+      <div>
+        <label for="disc1"></label>
+      </div>
+      <input type="number" id="disc1" name="disc1" placeholder="Enter a number"><br>
+      <button type="button" onclick="cleardisc1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+    </div>
+    <div class="login-form">
+      <div>
+        <label for="disc2"></label>
+      </div>
+      <input type="number" id="disc2" name="disc2" placeholder="Enter the amount discount"><br>
+      <button type="button" onclick="cleardisc2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+    </div>
+    <div class="login-form cal-btn">
+      <button type="button" class="btn" onclick="discNumbers()"><i class="fa-solid fa-equals fa-xl"></i></button>
+    </div>
+
+    <div id="result-2"></div>
+    <div id="result-3"></div>
+    <div id="result-4"></div>
+  </div>
+
   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
