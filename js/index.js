@@ -7,7 +7,12 @@ function addNumbers() {
   var num6 = parseFloat(document.getElementById("num6").value);
   // Check if either input is empty
   if (isNaN(num1) || isNaN(num2)) {
-    alert("Please input a number");
+    document.getElementById("num1").value = "0";
+    document.getElementById("num2").value = "0";
+    document.getElementById("num3").value = "0";
+    document.getElementById("num4").value = "0";
+    document.getElementById("num5").value = "0";
+    document.getElementById("num6").value = "0";
     return;
   } else if (isNaN(num3)) {
     document.getElementById("num3").value = "0";
@@ -52,4 +57,69 @@ function clearNum5() {
 }
 function clearNum6() {
   document.getElementById("num6").value = "0";
+}
+
+
+<!--multiply-->
+function multiplyNumbers() {
+  var mult1 = parseFloat(document.getElementById("mult1").value);
+  var mult2 = parseFloat(document.getElementById("mult2").value);
+  
+   if (isNaN(mult1) || isNaN(mult2)) {
+    // document.getElementById("mult1").value = "0";
+    // document.getElementById("mult2").value = "0";
+  alert('Please input the total number');
+    return;
+  }
+  
+  var result1 = mult1 * mult2;
+  var result1 = result1.toLocaleString();
+  document.getElementById("result-1").innerHTML =
+    "<span> Total: </span> " + "  " + result1;
+}
+function clearmult1() {
+  document.getElementById("mult1").value = "0";
+}
+
+function clearmult2() {
+  document.getElementById("mult2").value = "0";
+}
+
+console.log(clearmult1);
+$(function() {
+			$("#date1").datepicker();
+			var date1 = $("#date1")
+		});
+		$(function() {
+			$("#date2").datepicker();
+			var date2 = $("#date2")
+		});
+
+var date1Input = document.getElementById("date1");
+var date2Input = document.getElementById("date2");
+
+date1Input.addEventListener("input", func);
+date2Input.addEventListener("input", func);
+
+function func() {
+    var date1 = new Date(date1Input.value);
+    var date2 = new Date(date2Input.value);
+  
+    var milli_secs = date1.getTime() - date2.getTime();
+			
+    // Convert the milli seconds to Days
+    var days = milli_secs / (1000 * 3600 * 24);
+  
+    if (!isNaN(days)) {
+        document.getElementById("ans").innerHTML = "Total Nights: " + Math.round(days);
+    }
+}
+
+
+
+function cleardate2() {
+  document.getElementById("date2").value = "";
+}
+function cleardate1() {
+  document.getElementById("date1").value = "";
 }
