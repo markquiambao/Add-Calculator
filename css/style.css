@@ -5,6 +5,7 @@
 }
 
 .container {
+  margin:2rem;
 }
 .card {
   display: flex;
@@ -141,8 +142,8 @@ input {
   align-items: center;
   background-color: #cfeafb;
   padding: 5rem;
-  margin-left: 7rem;
-  width: 27%;
+  margin-left: 2rem;
+  width: 30%;
   border-radius: 1rem;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
 }
