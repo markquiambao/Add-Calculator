@@ -85,6 +85,7 @@ function clearmult2() {
   document.getElementById("mult2").value = "0";
 }
 
+/*Date*/
 console.log(clearmult1);
 $(function() {
 			$("#date1").datepicker();
@@ -123,3 +124,40 @@ function cleardate2() {
 function cleardate1() {
   document.getElementById("date1").value = "";
 }
+
+
+/*Discount*/
+
+function discNumbers() {
+  var disc1 = parseFloat(document.getElementById("disc1").value);
+  var disc2 = parseFloat(document.getElementById("disc2").value);
+
+  if (isNaN(disc1) || isNaN(disc2)) {
+    alert('Please input the values for both discounts');
+    return;
+  }
+
+  // Calculate the discount amount
+  var discountAmount = disc1 * (disc2 / 100);
+
+  // Calculate the discounted price
+  var discountedPrice = disc1 - discountAmount;
+
+  // Display the results
+  document.getElementById("result-2").innerHTML =
+    "<span> Discount Amount: </span> " + "  " + discountAmount.toFixed(2);
+  document.getElementById("result-3").innerHTML =
+    "<span> Discount Percentage: </span> " + "  " + disc2 + "%";
+  document.getElementById("result-4").innerHTML =
+    "<span> Discounted Price: </span> " + "  " + discountedPrice.toFixed(2);
+}
+
+function cleardisc1() {
+  document.getElementById("disc1").value = "0";
+}
+
+function cleardisc2() {
+  document.getElementById("disc2").value = "0";
+}
+
+
