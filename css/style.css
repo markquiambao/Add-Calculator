@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 62vh;
   gap: 2rem;
 }
 .bg {
@@ -133,4 +133,31 @@ input {
 }
 .date-calc h1 {
   margin-bottom: 1rem;
+}
+.discount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfeafb;
+  padding: 5rem;
+  margin-left: 7rem;
+  width: 27%;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+#result-2,
+#result-3,
+#result-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+#result-2 span,
+#result-3 span,
+#result-4 span {
+  font-weight: 500;
 }
