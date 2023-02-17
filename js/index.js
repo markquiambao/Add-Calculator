@@ -149,7 +149,7 @@ function discNumbers() {
   document.getElementById("result-3").innerHTML =
     "<span> Discount Percentage: </span> " + "  " + disc2 + "%";
   document.getElementById("result-4").innerHTML =
-    "<span> Discounted Price: </span> " + "  " + discountedPrice.toFixed(2);
+    "Discounted Price: <span>  " + "  " + discountedPrice.toFixed(2) + "</span>";
 }
 
 function cleardisc1() {
@@ -167,4 +167,3 @@ function clearResults() {
   document.getElementById("result-3").innerHTML = "";
   document.getElementById("result-4").innerHTML = "";
 }
-
