@@ -5,7 +5,7 @@
 }
 
 .container {
-  margin:2rem;
+  margin: 2rem;
 }
 .card {
   display: flex;
@@ -121,6 +121,7 @@ input {
 
 #sub {
   margin-top: 2rem;
+  margin-left: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,6 +132,10 @@ input {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+  width: 38%;
+  margin-left: 4rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
 }
 .date-calc h1 {
   margin-bottom: 1rem;
@@ -161,4 +166,9 @@ input {
 #result-3 span,
 #result-4 span {
   font-weight: 500;
+}
+
+#result-4 span {
+  color: #ec243b;
+  font-weight: 700;
 }
