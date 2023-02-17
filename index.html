@@ -88,20 +88,29 @@
         <div id="result-1"></div>
       </div>
 
-      <div class="date-calc">
-        <h1>Date Calculator </h1>
-
-        <div class="form-group">
-          <label class="control-label" for="date">From:</label>
-
-          <input class="form-control" id="date2" name="date" placeholder="MM/DD/YYYY" type="text" /><button type="button" onclick="cleardate2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-
-          <label class="control-label" for="date">To:</label>
-
-          <input class="form-control" id="date1" name="date" placeholder="MM/DD/YYYY" type="text" /><button type="button" onclick="cleardate1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-          <button id="sub" onclick="func()" type="button" class="btn btn-primary btn-sm"> Check</button>
-          <div class="alert alert-primary" role="alert" id="ans"></div>
+      <div class="discount">
+        <h1>Discount</h1>
+        <div class="login-form">
+          <div>
+            <label for="disc1"></label>
+          </div>
+          <input type="number" id="disc1" name="disc1" placeholder="Enter a number"><br>
+          <button type="button" onclick="cleardisc1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
         </div>
+        <div class="login-form">
+          <div>
+            <label for="disc2"></label>
+          </div>
+          <input type="number" id="disc2" name="disc2" placeholder="Enter the amount discount"><br>
+          <button type="button" onclick="cleardisc2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+        </div>
+        <div class="login-form cal-btn">
+          <button type="button" class="btn" onclick="discNumbers()"><i class="fa-solid fa-equals fa-xl"></i></button>
+        </div>
+
+        <div id="result-2"></div>
+        <div id="result-3"></div>
+        <div id="result-4"></div>
       </div>
 
     </div>
@@ -110,29 +119,20 @@
   </div>
   <!--container-->
 
-  <div class="discount">
-    <h1>Discount</h1>
-    <div class="login-form">
-      <div>
-        <label for="disc1"></label>
-      </div>
-      <input type="number" id="disc1" name="disc1" placeholder="Enter a number"><br>
-      <button type="button" onclick="cleardisc1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-    </div>
-    <div class="login-form">
-      <div>
-        <label for="disc2"></label>
-      </div>
-      <input type="number" id="disc2" name="disc2" placeholder="Enter the amount discount"><br>
-      <button type="button" onclick="cleardisc2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
-    </div>
-    <div class="login-form cal-btn">
-      <button type="button" class="btn" onclick="discNumbers()"><i class="fa-solid fa-equals fa-xl"></i></button>
-    </div>
+  <div class="date-calc">
+    <h1>Date Calculator </h1>
 
-    <div id="result-2"></div>
-    <div id="result-3"></div>
-    <div id="result-4"></div>
+    <div class="form-group">
+      <label class="control-label" for="date">From:</label>
+
+      <input class="form-control" id="date2" name="date" placeholder="MM/DD/YYYY" type="text" /><button type="button" onclick="cleardate2()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+
+      <label class="control-label" for="date">To:</label>
+
+      <input class="form-control" id="date1" name="date" placeholder="MM/DD/YYYY" type="text" /><button type="button" onclick="cleardate1()"><i class="fa-solid fa-trash-can fa-xl"></i></button>
+      <button id="sub" onclick="func()" type="button" class="btn btn-primary btn-sm"> Check</button>
+      <div class="alert alert-primary" role="alert" id="ans"></div>
+    </div>
   </div>
 
   <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
